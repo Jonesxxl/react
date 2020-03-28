@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ 
+
+<head>
+    <meta charset="utf-8">
+    <title>Go React</title>
+
+    <style>
+        .TagBG {
+            background-color: gold;
+        }
+
+        .TagFont {
+            font-size: 72px;
+            font-family: fantasy;
+            text-align: center;
+            border-radius: 50px;
+        }
+    </style>
+
+
+
+</head>
+ 
+
+<body>
+    <div id="mydiv">Der Text verschwindet</div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>  
+    <script type="text/babel">
+
+        class Same extends React.Component {
+
+            state = {
+                title: "Dreams worth more ",
+                size: 200
+            }
+
+            render() {
+                return(
+                <div>
+                    <h1>Titel: {this.state.title}</h1>
+                    <p>Das Buch hat {this.state.size} Seiten</p>
+
+                </div>)
+            }
+        }
+
+
+
+        ReactDOM.render(
+            <div className="TagBG TagFont">
+
+                <Same /></div>,
+            document.getElementById("mydiv")
+        );
+
+
+
+    </script>
+
+</body>
+ 
+
+</html>

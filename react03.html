@@ -6,19 +6,7 @@
     <meta charset="utf-8">
     <title>Go React</title>
 
-    <style>
-        .TagBG {
-            background-color: gold;
-        }
-
-        .TagFont {
-            font-size: 72px;
-            font-family: fantasy;
-            text-align: center;
-            border-radius: 50px;
-        }
-    </style>
-
+    
 
 
 </head>
@@ -35,9 +23,9 @@
 
             render() {
                 const myStyle = {
-                    display: "inline-block",    // display: inline-block;
-                    padding: "30px",            // padding: 30px
-                    borderRadius: '50%',        // border-radius: 50%
+                        // display: inline-block;
+                    margin: "30px",            // padding: 30px
+                    borderRadius: '40px',        // border-radius: 50%
                     backgroundColor: this.props.mycolor, // background-color: #C6DCEE
                     fontFamily: this.props.myFont,      // font-family: fantasy
                     fontSize: "64px",           // font-size: 64px
@@ -45,7 +33,7 @@
                 };
 
                 return <div style={myStyle}>
-                    <h1>{this.props.name}</h1>
+                    <h1>{this.props.children}</h1>
 
                     </div>
             }
@@ -55,12 +43,12 @@
 
         ReactDOM.render(
             <div >
-                <div className="TagBG TagFont">
-                    <Hero mycolor ="#AEA" name={"Batman"} />
-                </div>
-                <div className="TagBG TagFont">
-                    <Hero name={"Spiderman"} />
-                </div>
+                
+                    <Hero mycolor="#ff0"><h1>Batman</h1></Hero>
+                
+                
+                    <Hero mycolor="#ff0"><h1>Spiderman</h1></Hero>
+                
             </div>,
             document.getElementById("mydiv")
         );
